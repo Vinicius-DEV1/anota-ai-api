@@ -3,7 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-//public route health check
+// public route health check
 Route::get('/health', function () {
     return response()->json([
         'status' => 'ok',

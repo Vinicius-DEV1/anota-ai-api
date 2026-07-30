@@ -2,7 +2,6 @@
 
 namespace Tests\Feature;
 
-
 use Tests\TestCase;
 
 class HealthCheckTest extends TestCase
@@ -18,10 +17,10 @@ class HealthCheckTest extends TestCase
             'status' => 'ok',
             'service' => 'anota-ai-api',
             'version' => 'v1',
-            'environment'=> 'testing'
+            'environment' => 'testing',
         ])
-        ->assertJsonStructure([
-            'status', 'service', 'version', 'environment', 'timestamp',
-        ]);
+            ->assertJsonStructure([
+                'status', 'service', 'version', 'environment', 'timestamp',
+            ]);
     }
 }
