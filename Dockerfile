@@ -19,11 +19,10 @@ RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cac
 
 
 # Copy and setup entrypoint script
-COPY docker/entrypoint.sh /usr/local/bin/entrypoint.sh
-RUN chmod +x /usr/local/bin/entrypoint.sh
+COPY docker/entrypoint.sh /etc/entrypoint.d/99-entrypoint.sh
+RUN chmod 755 /etc/entrypoint.d/99-entrypoint.sh
 
 USER www-data
 
 EXPOSE 8080
 
-ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]

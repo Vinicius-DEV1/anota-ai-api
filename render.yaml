@@ -6,6 +6,8 @@ services:
     region: oregon
     healthCheckPath: /api/v1/health
     envVars:
+      - key: PORT
+        value: 8080
       - key: APP_ENV
         value: production
       - key: APP_DEBUG
